@@ -24,7 +24,7 @@ def main():
     
     channel.exchange_declare(
         exchange='topic_logs',
-        exchange_type='topic'  # Manda todos los mensajes que recibe a todas las colas que conoce
+        exchange_type='topic'  # Manda todos los mensajes que recibe a las colas cuyo binding_key matchea con un message_key
     )
 
     """ Como cada vez que nos conectemos queremos ver los nuevos mensaje solo,
